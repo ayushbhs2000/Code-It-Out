@@ -1,0 +1,45 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+	int n;
+	
+	cin>>n;
+	string x;
+	vector<string> s;
+	int c[n]={0};
+	int i,f,a;
+	for(i=0; i<n; i++)
+	{
+		cin>>x;
+		f=0;
+		
+		vector<string>::iterator it;
+		
+		it=find(s.begin(),s.end(),x);
+		
+		if(it!=s.end())
+		{
+			f=1;
+			a=it-s.begin();
+			c[a]++;
+		}
+		
+				
+		if(f==0)
+		{
+			s.push_back(x);
+			cout<<"OK";
+		}
+		else
+		{
+			cout<<x<<c[a];
+		}
+		cout<<"\n";
+		
+		
+	}
+}
+
